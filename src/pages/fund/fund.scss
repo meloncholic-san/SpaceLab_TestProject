@@ -1,0 +1,477 @@
+@use '../../scss/variables' as variables;
+
+//HERO
+
+.token-hero-section.fund {
+
+    background: url('../img/fund.gif') no-repeat center center;
+}
+
+.token-hero-container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.token-hero-title.fund {
+    background: variables.$accentFour;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.token-hero-title span:last-child {
+    align-self: flex-end;
+}
+
+.token-hero-description {
+    max-width: 523px;
+    font-family: Chakra Petch;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.token-hero-btn {
+  cursor: pointer;
+  color: variables.$mainWhite;
+
+}
+
+.token-hero-btn.fund::before {
+
+  background: variables.$accentFour;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.token-hero-btn.fund:hover {
+
+  background: variables.$accentFour;
+}
+
+.btoken-hero-btn::before {
+  background: transparent;
+}
+
+
+//FEATURES 
+
+.fund-features-swiper {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+
+.token-feature-item.fund {
+  background: variables.$accentFour;
+}
+
+.token-feature-inner.fund {
+  box-shadow: 2px 2px 9px 0px variables.$accentShadowGreen;
+}
+
+
+//ROADMAP
+
+
+.fund-roadmap-section {
+    margin-top: 176px;
+    max-width: 1920px;
+    margin-bottom: 161px;
+}
+
+.fund-roadmap-container {
+    margin: 0 auto;
+   max-width: 1520px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 734px;
+ padding-right: 70px;
+}
+
+.fund_roadmap-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+.fund-step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 245px;
+  height: 182px;
+  background: url('../img/fund_roadmap_container_cropped.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  transform: none;
+}
+.fund-step-branch {
+    position: relative;
+}
+
+.fund-step.step-1 {
+    left: -144px;
+    top: 130px;
+}
+.fund-step.step-2 {
+    left: -48px;
+    top: -28px;
+}
+
+.fund-step.step-3 {
+    bottom: -132px;
+    left: 172px;
+}
+
+.fund-branch {
+    left: 283px;
+}
+
+.fund-step.step-4 {
+     background: url('../img/fund_roadmap_container4.png');
+}
+
+.fund-step.no-bg {
+    background: none;
+}
+
+/* Зеркалим только фон */
+.fund-step.step-4.reversed {
+  transform: scaleY(-1);
+  justify-content: flex-end;
+}
+
+/* Отменяем отражение для текста */
+.fund-step.reversed .fund-box {
+  transform: scaleY(-1);
+}
+
+.fund-step-img.no-bg {
+    fill: white;
+    position: absolute;
+}
+
+
+
+.fund-box-title {
+    font-family: Chakra Petch;
+    font-weight: 700;
+    font-size: 33px;
+}
+
+.fund-box-phrase {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: Montserrat;
+}
+.fund-box.step-1 {
+    padding-top: 11px;
+    padding-left: 11px;
+    .fund-box-title {
+    margin-bottom: 28px;
+    }
+}
+.fund-box.step-2 {
+    padding-bottom: 36px;
+    padding-left: 22px;
+        .fund-box-title {
+        margin-bottom: 20px;
+    }
+}
+
+.fund-box.step-3 {
+    padding-top: 14px;
+    padding-left: 24px;
+    .fund-box-title {
+    margin-bottom: 24px;
+    }
+}
+.fund-box.step-4{
+    padding-bottom: 36px;
+    padding-left: 16px;
+    .fund-box-title {
+        margin-bottom: 9px;
+    }
+}
+
+.fund-box.step-5{
+    padding-top: 10px;
+    padding-left: 16px;
+    .fund-box-title {
+        margin-bottom: 9px;
+    }
+}
+
+.fund-branch {
+  display: flex;
+  flex-direction: column;
+  gap: 332px;
+  margin-top: -20px;
+  position: relative;
+  color: variables.$mainBlack;
+}
+
+.branch-top,
+.branch-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// FAQ
+
+
+.main-faq-section-container {
+  margin: 0 auto;
+  max-width: 1520px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+}
+
+
+.main-faq-headline.fund {
+  background: variables.$accentFour;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.main-faq-item.fund {
+  border-image-source: variables.$accentFour;
+  box-shadow: 2px 2px 20px 0px #55FF3980;
+}
+
+.main-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.main-faq-question {
+  width: 100%;
+  // height: 95px;
+  background: transparent;
+  border: none;
+  padding: 30px 28px 30px 20px;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+}
+
+.main-faq-question .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  font-weight: bold;
+  font-size: 36px;
+  background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.main-faq-answer {
+  font-size: 19px;
+  line-height: 180%;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 20px;
+
+  font-size: 14px;
+  color: #aaa;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.main-faq-item.active .main-faq-answer {
+  max-height: 150px; 
+  padding: 15px 20px;
+}
+
+.main-faq-item.active .main-faq-question .toggle {
+  transform: rotate(45deg);
+}
+
+
+//CONTACTS
+
+.fund-contact-section {
+  position: relative;
+  padding-bottom: 103px;
+}
+
+.contact-container.fund {
+  max-width: 794px;
+  min-width: 794px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 0;
+
+  &::before {
+    transform: rotate(25deg) scaleY(0.7) skewX(20deg);
+    width: 460px;
+    height: 494px;
+    left: -460px;
+    top: 22%;
+  }
+
+  &::after {
+    transform: rotate(25deg) scaleY(0.7) skewX(20deg);
+    width: 460px;
+    height: 494px;
+    right: -480px;
+    top: -8%;
+  }
+}
+
+
+
+.fund-contact-token-left {
+    width: 456px;
+    height: 356px;
+    bottom: 110px;
+    right: -520px;
+    position: absolute;
+    transform: scaleX(-1);
+    rotate: (-12deg);
+}
+
+.fund-contact-token-right {
+    left: -500px;
+    bottom: -25px;
+    width: 456px;
+    height: 356px;
+    position: absolute;
+    rotate: (12deg);
+}
+
+
+
+.fund-contacts-frame {
+  position: relative;
+  z-index: 2;
+  padding: 50px 65px 50px 40px;
+}
+
+.corner.fund {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #fff;
+}
+
+.bottom-left.fund {
+  bottom: 0px;
+  left: 0px;
+  border-right: none;
+  border-top: none;
+}
+
+.top-right.fund {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.fund-contact-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.fund-contact-title {
+        min-width: 794px;
+font-weight: 700;
+font-size: 50px;
+text-align: center;
+vertical-align: middle;
+margin-bottom: 108px;
+}
+
+.fund-contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.fund-btn-outline-blue {
+  position: relative;
+  display: inline-block;
+  padding: 20px 67px;
+    font-weight: 600;
+    font-size: 33.05px;
+  color: variables.$mainWhite;
+  text-decoration: none;
+  border-radius: 0px 60px 0px 60px;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fund-btn-outline-blue::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  border-radius: 0px 60px 0px 60px;
+  padding: 2px;
+  background: variables.$accentTwo;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.fund-btn-outline-blue:hover {
+  background: variables.$accentTwo;
+}
+
+.fund-btn-outline-blue:hover::before {
+  background: transparent;
+}
+
+
+
+
+.fund-contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 86px;
+  margin-top: 57px;
+}
+
+.fund-contact-socials-icons {
+  width: 50px;
+  height: 50px;
+}

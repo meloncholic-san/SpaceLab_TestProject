@@ -1,0 +1,44 @@
+
+@use '../components/header/header.scss';
+@use '../components/footer/footer.scss';
+@use '../pages/main-page/main-page.scss';
+@use '../pages/token/token.scss';
+@use '../pages/fund/fund.scss';
+
+
+@use './variables.scss' as variables;
+
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: variables.$mainBlack;
+  color: variables.$mainWhite;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,p {
+  margin: 0 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// section {
+//   width: 375px;
+// }
+
+// @media screen and (min-width: 1920px) {
+//   section {
+//     width: 1920px;
+//   }
+// }

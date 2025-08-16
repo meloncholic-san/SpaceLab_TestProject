@@ -1,0 +1,552 @@
+@use '../../scss/variables' as variables;
+
+.token-hero-section {
+    height: 815px;
+    max-width: 1920px;
+    background: url('../img/token.gif') no-repeat center center;
+}
+
+.token-hero-container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.token-hero-title {
+
+    max-width: 523px;
+    min-width: 523px;
+    font-size: 120px;
+    font-weight: 600;
+    line-height: 100px;
+    background: linear-gradient(90deg, #fc84ff 0%, #54d1fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 21px;
+}
+
+.token-hero-title span:last-child {
+    align-self: flex-end;
+}
+
+.token-hero-description {
+    max-width: 523px;
+    font-family: Chakra Petch;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.token-hero-btn {
+  margin-top: 45px;
+  position: relative;
+  display: inline-block;
+  padding: 18px 70px;
+  color: variables.$mainWhite;
+  text-decoration: none;
+  border-radius: 60px 0 60px 0;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.token-hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  border-radius: 60px 0 60px 0;
+  padding: 2px;
+  background: variables.$accentOne;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.token-hero-btn:hover {
+
+  background: variables.$accentOne;
+}
+
+.btoken-hero-btn::before {
+  background: transparent;
+}
+
+
+//FEATURES
+
+.token-features-section {
+  max-width: 1920px;
+    position: relative;
+    top: -40px;
+}
+
+.token-features-swiper {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.token-features-swipper-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.token-feature-item {
+  height: 348px;
+  padding: 2px;
+  border-radius: 60px;
+  background: variables.$accentSeven;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin: 0 0 !important;
+}
+
+.token-feature-inner {
+  background-color: variables.$mainBlack;
+  height: 100%;
+  border-radius: 60px;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 9px 0px variables.$accentShadowPurple;
+}
+
+@media (max-width: 768px) {
+  .token-feature-description {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.token-features-btn-icon {
+    width: 90px;
+    height: 90px;
+}
+
+
+.token-feature-description {
+    min-width: 420px;
+    max-width: 430px;
+    min-height: 85px;
+   margin-top: 9px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 17px;
+
+
+}
+
+.token-feature-inner a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 22px;
+  display: inline-block;
+  background: variables.$accentSeven;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 10px;
+}
+
+.token-feature-inner a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+//TOKENOMICS
+
+.tokenomics-section {
+    max-width: 1920px;
+}
+.tokenomics-container {
+    justify-self: center;
+}
+
+.tokenomics-title {
+  font-weight: 600;
+  font-size: 69px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.tokenomics-title-highlight {
+    background: variables.$accentTwo;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.tokenomics-phrase {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 155%;
+  text-align: center;
+  max-width: 1125px;
+  margin-bottom: 66px;
+}
+
+.segment-expanded {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+.segment-base {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+.tokenomics-chart:hover .segment-expanded {
+  opacity: 1;
+}
+
+.tokenomics-chart:hover .segment-base {
+  opacity: 0;
+}
+
+
+//ROADMAP
+
+
+.token-roadmap-section {
+  width: 1920px;
+}
+
+.token-roadmap-container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.token-roadmap-title {
+  font-family: Chakra Petch;
+  font-weight: 600;
+  font-size: 61px;
+  letter-spacing: 6px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.token-roadmap-subtitle {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  justify-self: center;
+  text-align: center;
+  max-width: 1120px;
+  margin-bottom: 99px;
+}
+
+.token-roadmap {
+  position: absolute;
+  max-height: 1944px;
+  max-width: 188px;
+  top: 57px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.roadmap-step {
+  display: flex;
+  flex-direction: row;
+}
+.roadmap-step.step-2 {
+  position: relative;
+  top: -50px;
+}
+.roadmap-step.step-3 {
+  position: relative;
+  top: -112px;
+}
+.roadmap-step.step-4 {
+  position: relative;
+  top: -155px;
+}
+.roadmap-step.step-5 {
+  position: relative;
+  top: -200px;
+}
+.roadmap-step.step-6 {
+  position: relative;
+  top: -215px;
+}
+
+
+
+.roadmap-step:nth-child(even) {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+
+
+.token-roadmap-stp-count {
+  padding-right: 27px;
+  padding-top: 65px;
+  font-family: Chakra Petch;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 3.3px;
+
+}
+
+.token-roadmap-stp-count.reversed {
+  padding: 0;
+  padding-top: 68px;
+}
+
+.token-roadmap-stp-count.no-point {
+   padding-right: 107px;
+}
+.token-roadmap-stp-count.no-point.reversed {
+   padding-left: 107px;
+}
+.token-roadmap-stp-count.no-point.reversed.step-6 {
+   padding-left: 206px;
+}
+
+.token-roadmap-step-point {
+  margin-right: 29px;
+  width: 57px;
+  height: 57px;
+  margin-top: 57px;
+  background: variables.$accentOne;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.token-roadmap-step-point.reversed {
+    margin-left: 29px;
+    margin-top: 63px;
+    margin-right: 25px;
+}
+
+
+.step-content {
+  background: url('../img/token_road_container_cropped.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  min-width: 637px;
+  min-height: 385px;
+  position: relative;
+  // border: 2px solid transparent;
+}
+
+.step-content.step-5 {
+  background: url('../img/token_road_container5_cropped.png');
+  min-height: 505px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  position: relative;
+}
+
+
+.step-content.even {
+  transform: scaleX(-1);
+
+}
+
+.step-content.even .step-inner {
+  transform: scaleX(-1); 
+}
+
+.token-roadmap-list-item {
+  margin-bottom: 15px;
+}
+.token-roadmap-list-item:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.roadmap-date {
+  font-family: Chakra Petch;
+font-weight: 500;
+font-size: 37px;
+letter-spacing: 3px;
+padding-left: 70px;
+padding-top: 25px;
+margin-bottom: 8px;
+text-align: left;
+}
+
+// .roadmap-date.reversed {
+//   padding-right: 70px;
+//   text-align: right;
+// }
+
+.roadmap-phrase {
+font-weight: 500;
+font-size: 24px;
+text-align: left;
+padding-left: 70px;
+}
+
+// .roadmap-phrase.reversed {
+//   text-align: right;
+//   padding-right: 70px;
+// }
+
+
+
+
+
+//CONTACTS 
+
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+  padding-top: 126px;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.contact-container.token {
+  position: relative;
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  &::before {
+    left: 0px;
+    top: 35%;
+  }
+
+  &::after {
+  top: -25%;
+  transform: rotate(30deg) scaleY(.7) skewX(12deg);
+  }
+}
+
+
+
+.token-contact-token-left {
+  width: 245px;
+  height: 220px;
+  transform: scaleX(-1);
+  bottom: 330px;
+  right: 92px;
+  position: absolute;
+}
+
+.token-contact-token-right {
+  left: 92px;
+  width: 245px;
+  height: 220px;
+  position: absolute;
+  bottom: -30px;
+}
+
+
+
+
+//TOKEN ADDRESS 
+.token-address-section {
+  text-align: center;
+  margin-top: 159px;
+  padding-bottom: 119px;
+  border-bottom: 1px solid variables.$mainWhite;
+}
+
+.token-address-title {
+  font-family: Chakra Petch;
+  font-weight: 600;
+  font-size: 64px;
+}
+
+.token-address-title-highlight {
+  background: variables.$accentSeven;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.token-address-subtitle {
+  margin-top: 25px;
+  margin-bottom: 70px;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.token-address-box {
+  margin: 0 auto;
+  padding: 35px 10px 37px 33px;
+  max-width: 863px;
+  max-height: 96px;
+  border: 1px solid variables.$mainWhite;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  box-sizing: border-box;
+
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 190px;
+  height: 76px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  background: variables.$accentOne;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  color: variables.$mainWhite;
+
+}
+
+.copy-button:hover {
+  opacity: 0.85;
+}
+
+.token-address-btn-icon {
+  width: 32px;
+  height: 32px;
+}

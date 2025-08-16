@@ -1,0 +1,149 @@
+@use '../../scss/variables' as variables;
+
+
+
+
+.footer-container {
+    padding-top: 47px;
+    // position: relative;
+    padding-bottom: 35px;
+    border-bottom: 1px solid variables.$mainWhite;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: row;
+    gap: 107px;
+}
+
+.footer-content {
+  margin: 0 auto;
+  min-width: 1428px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 54px;
+  position: relative;
+}
+
+
+
+.footer-second {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.footer-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-navigation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.footer-navigation a {
+  text-decoration: none; 
+  color: variables.$mainWhite;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.footer-nav-separator {
+  display: inline-block;
+  height: 48px;
+  width: 1px;
+  background-color: #959595;
+  pointer-events: none;
+}
+
+.footer-language-select {
+  background-color: variables.$mainBlack;
+  color: variables.$mainWhite;
+  border: none;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-btn-contact {
+  padding: 18px 35px;
+  background-color: variables.$mainBlack;
+  color: variables.$mainWhite;
+  border: 2px solid variables.$mainWhite;
+  border-radius: 50px;
+  width: 195px;
+  height: 63px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.footer-btn-contact:hover {
+  opacity: 0.9;
+}
+
+.footer-btn-buy {
+  padding: 18px 45px;
+  background: variables.$accentTwo;
+  color: variables.$mainWhite;
+  border: 2px solid variables.$mainWhite;
+  border-radius: 50px;
+  width: 210px;
+  height: 63px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.footer-btn-buy:hover {
+  opacity: 0.9;
+}
+
+
+.footer-logo {
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-logo p {
+  margin-left: 15px;
+}
+.footer-logo-icon {
+  fill: white;
+  stroke: white;
+}
+
+.footer-credits {
+    font-weight: 500;
+    font-size: 17px;
+    color: variables.$secondaryGrey;
+    min-width: 979px;
+    max-height: 42px;
+}
+
+.footer-coins-img {
+    width: 244px;
+    height: 254px;
+    position: absolute;
+    right: -270px;
+    top: -50px;
+}
