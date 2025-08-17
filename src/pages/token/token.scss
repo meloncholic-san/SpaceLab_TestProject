@@ -4,13 +4,49 @@
     height: 815px;
     max-width: 1920px;
     background: url('../img/token.gif') no-repeat center center;
+        margin-left: auto;
+    margin-right: auto;
 }
+
+
+
+
 
 .token-hero-container {
     max-width: 1520px;
     margin: 0 auto;
     padding-top: 150px;
 }
+
+.token-hero-container::before {
+  // content: "";
+  // position: absolute;
+  // width: 621px;
+  // height: 833px;
+  // top: 167px;
+  // left: 1410px;
+  // background: url('../img/token_hero_blur.png') no-repeat;
+  // background-size: contain;
+  // filter: blur(20px);
+  // opacity: 0.8;
+  // z-index: 0;
+  // pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 1221px;
+  height: 1433px;
+  top: 110px;
+  right: -110px;
+  background: url('../img/token_hero_blur.svg') no-repeat center;
+  background-size: auto;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  // filter: blur(30px);
+  z-index: 0;
+  pointer-events: none;
+    
+}
+
 
 .token-hero-title {
 
@@ -89,6 +125,8 @@
   max-width: 1920px;
     position: relative;
     top: -40px;
+        margin-left: auto;
+    margin-right: auto;
 }
 
 .token-features-swiper {
@@ -179,10 +217,43 @@
 //TOKENOMICS
 
 .tokenomics-section {
-    max-width: 1920px;
+  margin-top: 185px;
+  margin-bottom: 200px;
+  max-width: 1920px;
+      margin-left: auto;
+    margin-right: auto;
 }
 .tokenomics-container {
-    justify-self: center;
+  justify-self: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 567px;
+    height: 722px;
+    background: radial-gradient(circle, #42F4FF, #7673FF 80%, transparent 100%);
+    filter: blur(250px);
+    top: -20px;
+    left: -650px;
+    pointer-events: none;
+    z-index: 0;
+    // border-radius: 50%
+  }
+
+    &::after {
+    content: '';
+    position: absolute;
+    width: 567px;
+    height: 722px;
+    background: radial-gradient(circle, #42F4FF, #7673FF 80%, transparent 100%);
+    filter: blur(250px);
+    bottom: -550px;
+    right: -450px;
+    pointer-events: none;
+    z-index: 0;
+    // border-radius: 50%
+  }
+
 }
 
 .tokenomics-title {
@@ -237,6 +308,8 @@
 
 .token-roadmap-section {
   width: 1920px;
+      margin-left: auto;
+    margin-right: auto;
 }
 
 .token-roadmap-container {
@@ -245,6 +318,37 @@
   max-width: 1520px;
   display: flex;
   flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 594px;
+    height: 1191px;
+    background: radial-gradient(ellipse at center, #86AFFE 13.23%, #A57AFF 53.2%, #FB84FF 91.95%, transparent 100%);
+    filter: blur(250px);
+    top: 230px;
+    left: -480px;
+    transform: scale(1.3, 1);
+    pointer-events: none;
+    z-index: 0;
+    // border-radius: 50%
+
+  }
+
+
+    &::after {
+    content: "";
+    position: absolute;
+    width: 567px;
+    height: 722px;
+    background: radial-gradient(circle, #86affe 13.23%, #a57aff 53.2%, #fb84ff 91.95%, transparent 100%);
+    filter: blur(250px);
+    bottom: 194px;
+    right: -247px;
+    pointer-events: none;
+    z-index: -1;
+    // border-radius: 50%
+  }
 }
 
 .token-roadmap-title {

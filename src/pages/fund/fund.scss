@@ -7,10 +7,29 @@
     background: url('../img/fund.gif') no-repeat center center;
 }
 
+
+
 .token-hero-container {
     max-width: 1520px;
     margin: 0 auto;
     padding-top: 150px;
+}
+
+.token-hero-container.fund::before {
+  content: "";
+  position: absolute;
+  width: 1221px;
+  height: 1433px;
+  top: 110px;
+  right: -110px;
+  background: url('../img/fund_hero_blur.svg') no-repeat center;
+  background-size: auto;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  // filter: blur(30px);
+  z-index: 0;
+  pointer-events: none;
+    
 }
 
 .token-hero-title.fund {
@@ -80,6 +99,8 @@
     margin-top: 176px;
     max-width: 1920px;
     margin-bottom: 161px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fund-roadmap-container {
@@ -92,6 +113,20 @@
   position: relative;
   min-height: 734px;
  padding-right: 70px;
+   &::before {
+    content: '';
+    position: absolute;
+    width: 545px;
+    height: 451px;
+    background: radial-gradient(ellipse,#B2FF0F 10.47%,  #76FFEF 88.29%, transparent 100%);
+    filter: blur(250px);
+    top: -20px;
+    left: -350px;
+    pointer-events: none;
+    z-index: 0;
+    transform: skewY(160deg) rotate(25deg);
+    // border-radius: 50%
+  }
 }
 
 .fund_roadmap-img {
@@ -240,6 +275,21 @@
   gap: 10px;
   justify-content: center;
   justify-items: center;
+  position: relative;
+     &::before {
+    content: '';
+    position: absolute;
+    width: 337px;
+    height: 451px;
+    background: linear-gradient(#B2FF0F 10.47%, #76FFEF 88.29%, transparent 100%);
+    filter: blur(225px);
+    bottom: -20px;
+    right: -350px;
+    pointer-events: none;
+    z-index: 0;
+    transform: rotate(180deg);
+    // border-radius: 50%
+  }
 }
 
 

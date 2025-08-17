@@ -1,7 +1,7 @@
 import { initTokenPage } from '../pages/token/token.js'
 import { initMainPage } from '../pages/main-page/main_page.js'
 import { initFundPage } from '../pages/fund/fund.js'
-
+import { initMarketplace } from '../pages/marketplace/marketplace.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.querySelector("#app");
@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         case 'fund':
           currentCleanup = initFundPage();
+          break;
+        case 'marketplace':
+          currentCleanup = initMarketplace();
           break;
       }
       })

@@ -1,0 +1,52 @@
+.marketplace-comingSoon {
+    max-width: 1920px;
+    min-height: 1020px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    // position: relative;
+    // overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 628px;
+        height: 768px;
+        transform: rotate(150deg);
+        background: linear-gradient(#FF6C56 6.96%, #FF9344 88.16%);
+        filter: blur(250px);
+        top: -200px;
+        left: -200px;
+        pointer-events: none;
+        z-index: 0;
+        // border-radius: 50%
+
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 628px;
+        height: 768px;
+        transform: rotate(150deg);
+        background: linear-gradient(#FF6C56 6.96%, #FF9344 88.16%);
+        filter: blur(250px);
+        bottom: -200px;
+        right: -200px;
+        pointer-events: none;
+        z-index: 0;
+        // border-radius: 50%
+
+    }
+    
+}
+
+.marketplace-comingSoon-title {
+    font-family: Chakra Petch;
+    font-weight: 600;
+    font-size: 150px;
+    letter-spacing: 18px;
+    text-align: center;
+
+}

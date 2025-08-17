@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default {
   mode: 'development',
   entry: {
+    marketplace: './src/pages/marketplace/marketplace.js',
     fund: './src/pages/fund/fund.js',
     token: './src/pages/token/token.js',
     main_page: './src/pages/main-page/main_page.js',
