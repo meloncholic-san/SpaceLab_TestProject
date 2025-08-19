@@ -2,11 +2,13 @@ import { initTokenPage } from '../pages/token/token.js'
 import { initMainPage } from '../pages/main-page/main_page.js'
 import { initFundPage } from '../pages/fund/fund.js'
 import { initMarketplace } from '../pages/marketplace/marketplace.js';
+import { initHeader } from '../components/header/header.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.querySelector("#app");
   let currentCleanup = null;
 
+  initHeader();
 
   function loadPage(page) {
       if (currentCleanup) {

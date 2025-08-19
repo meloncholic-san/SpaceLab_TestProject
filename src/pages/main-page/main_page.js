@@ -4,9 +4,10 @@ import 'swiper/css';
 export function initMainPage () {
   const swiperFeatures = new Swiper('.main-features-swiper', {
     loop: false,
-    spaceBetween: 20,
+    spaceBetween: 40,
     grabCursor: true,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     breakpoints: {
       0: { slidesPerView: 1 },
       1024: { slidesPerView: 4 },
@@ -27,16 +28,12 @@ export function initMainPage () {
         loopedSlides: 8,
         initialSlide: 0,
         centeredSlides: false,
+        watchOverflow: false,
         breakpoints: {
           0: {
             slidesPerView: 2,
             spaceBetween: 10,
           },
-        },
-        on: {
-          init: function() {
-            this.slideToLoop(0, 0); 
-          }
         }
       });
 
@@ -49,12 +46,32 @@ export function initMainPage () {
   }
 
   window.addEventListener('load', () => {
-    initSwiperTeam();
+    initSwiperTeam();     
+    movePartnersOnMobile();
   });
 
   window.addEventListener('resize', () => {
-    initSwiperTeam();
+    initSwiperTeam();    
+     movePartnersOnMobile();
   });
+
+
+  function movePartnersOnMobile() {
+    const isMobile = window.matchMedia('(max-width: 1023px)').matches;
+    const partners = document.querySelector('.partners');
+    const hero = document.querySelector('.main-hero');
+    const teamSection = document.querySelector('.main-team-section');
+
+    if (isMobile && partners && hero && hero.nextElementSibling !== partners) {
+      hero.insertAdjacentElement('afterend', partners);
+    }
+
+    if (!isMobile && partners && teamSection && teamSection.nextElementSibling !== partners) {
+      teamSection.insertAdjacentElement('afterend', partners);
+    }
+  }
+
+
 
   const nextBtn = document.querySelector('.team-swiper-next');
   const prevBtn = document.querySelector('.team-swiper-prev');

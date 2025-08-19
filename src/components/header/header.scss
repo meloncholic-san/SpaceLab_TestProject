@@ -115,3 +115,84 @@
 .header-btn-buy:hover{ 
     opacity: 0.9;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.burger-btn {
+  display: none;
+  width: 30px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+
+    .header-container {
+        max-width: 375px;
+        padding: 0 12px;
+        margin: 0 auto;
+        max-height: 76px;
+    }
+
+    .header-logo {
+        font-size: 16px;
+    }
+
+    .header-burger-icon {
+        min-width: 30px;
+        min-height: 16px;
+    }
+
+    .header-logo-icon {
+        width: 17px;
+        height: 17px;
+    }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  .header-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: variables.$mainBlack;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .header-menu.active {
+    left: 0;
+  }
+
+  .header-actions,
+  .header-contacts,
+  .header-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-nav-separator {
+    display: none;
+  }
+}
