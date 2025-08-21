@@ -9,12 +9,6 @@
 
 
 
-.token-hero-container {
-    max-width: 1520px;
-    margin: 0 auto;
-    padding-top: 150px;
-}
-
 .token-hero-container.fund::before {
   content: "";
   position: absolute;
@@ -36,17 +30,6 @@
     background: variables.$accentFour;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.token-hero-title span:last-child {
-    align-self: flex-end;
-}
-
-.token-hero-description {
-    max-width: 523px;
-    font-family: Chakra Petch;
-    font-weight: 400;
-    font-size: 22px;
 }
 
 .token-hero-btn {
@@ -73,6 +56,65 @@
 .btoken-hero-btn::before {
   background: transparent;
 }
+
+
+
+//HERO MOBILE
+@media (max-width: 480px) {
+ .token-hero-section.fund {
+  background: none;
+ }
+
+ .token-hero-container.fund {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+
+    &::before {
+      display: none;
+  }
+
+ }
+
+ .token-hero-mobile-gif.fund {
+  display: block;
+    background: url('../img/fund.gif') no-repeat center center;
+    background-size: contain;
+    width: 802px;
+    height: 342px;
+ }
+
+ .token-hero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ }
+ .token-hero-title {
+  font-size: 60px;
+  min-width: 240px;
+  max-width: none;
+  gap: 0;
+  line-height: 70px;
+  margin-bottom: 5px;
+ }
+ .token-hero-description {
+ font-size: 18px; 
+ text-align: center;
+ max-width: 304px;
+ }
+.token-hero-btn.fund {
+  font-size: 20px;
+  padding: 18px 35px;
+  margin-top: 30px;
+}
+
+
+}
+
+
 
 
 //FEATURES 
@@ -129,6 +171,7 @@
   }
 }
 
+
 .fund_roadmap-img {
     position: absolute;
     top: 50%;
@@ -175,6 +218,7 @@
 
 .fund-step.step-4 {
      background: url('../img/fund_roadmap_container4.png');
+     height: 184px;
 }
 
 .fund-step.no-bg {
@@ -264,6 +308,125 @@
   justify-content: center;
 }
 
+.fund-roadmap-arrow-mobile {
+  display: none;
+}
+//ROADMAP MOBILE 
+
+@media (max-width: 480px) {
+  .fund-roadmap-section {
+    max-width: 375px;
+    margin-top: 70px;
+    margin-bottom: 90px;
+  }
+
+
+  .fund-roadmap-container {
+    flex-direction: column;
+    max-width: 245px;
+    margin: 0 auto;
+    padding: 0;
+
+       &::before {
+    top: -35px;
+    left: -135px;
+    width: 335px;
+    height: 175px;
+    filter: blur(80px);
+    background: linear-gradient(310deg, #B2FF0F 10.47%, #76FFEF 88.29%, transparent 100%);
+    transform: scale(1, 0.7) skew(342deg, 341deg);
+    z-index: -1;
+    }
+
+    &::after {
+    content: "";
+    position: absolute;
+    bottom: -61px;
+    right: -174px;
+    width: 335px;
+    height: 175px;
+    filter: blur(80px);
+    background: linear-gradient(310deg, #b2ff0f 10.47%, #76ffef 88.29%, transparent 100%);
+    transform: scale(1, .7) skew(342deg, 341deg) rotate(27deg);
+    z-index: -1;
+    }
+
+  }
+  .fund_roadmap-img {
+    display: none;
+  }
+  .fund-roadmap-arrow-mobile {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+  }
+  .fund-step.step-1,
+  .fund-step.step-2,
+  .fund-step.step-3 {
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(black, #000), linear-gradient(90deg, #a8ff78, #78ffd6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    width: 245px;
+    height: 144px;
+  }
+
+  .fund-step-branch {
+    top: 20px;
+    left: -282px;
+  }
+  .fund-branch {
+    gap: 8px;
+
+  }
+  .fund-step.step-4 {
+    border-radius: 20px;
+    background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+    width: 245px;
+    height: 144px;
+  }
+  .fund-step.step-4.reversed, .fund-box.step-5.reversed {
+    transform: scaleY(1);
+  }
+   .fund-step.step-1,
+   .fund-step.step-2,
+   .fund-step.step-3 {
+    left: 0;
+    top: 0;
+   }
+  .fund-box.step-1, 
+  .fund-box.step-2,
+  .fund-box.step-3,
+  .fund-box.step-4,
+  .fund-box.step-5  {
+    padding: 20px 8px 20px 18px;
+  } 
+
+  .fund-box.step-4 .fund-box-title,
+  .fund-box.step-5 .fund-box-title
+   {
+    margin-bottom: 28px;
+  }
+  .fund-box-title {
+    font-size: 25px;
+  }
+  .fund-box-phrase {
+    font-size: 13px;
+  }
+
+  .fund-step-img {
+    display: none;
+  }
+  .branch-top {
+    order: 2;
+  }
+
+  .branch-bottom {
+    order: 1;
+  }
+ }
 
 // FAQ
 
@@ -354,6 +517,19 @@
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
+//FAQ MOBILE
+
+@media (max-width: 480px) {
+    .main-faq-question.fund {
+      font-size: 14px;
+      padding: 15px;
+    }
+    .main-faq-question.fund .toggle {
+      width: 18px;
+      height: 18px;
+      font-size: 22px;
+    }
+}
 
 //CONTACTS
 
@@ -516,3 +692,46 @@ margin-bottom: 108px;
   width: 50px;
   height: 50px;
 }
+
+
+//CONTACTS MOBILE 
+
+@media (max-width: 480px) { 
+  .fund-contact-section {
+    padding-bottom: 30px;
+  }
+  .fund-contact-title {
+  display: none;
+  }
+
+  .fund-contact-token-left {
+  display: none;
+  }
+
+  .fund-btn-outline-blue {
+    font-size: 18px;
+    padding: 12px 19px 11px;
+  }
+
+  .contact-container.fund {
+    max-width: 330px;
+    min-width: 330px;
+  }
+  .fund-contacts-frame {
+    padding: 20px 12px
+  }
+  .corner.fund {
+    width: 30px;
+    height: 30px;
+}
+.fund-contact-socials {
+  flex-wrap: wrap;
+  gap: 27px 75px;
+  margin-top: 37px;
+}
+.fund-contact-socials-icons {
+  width: 37px;
+  height: 37px;
+}
+}
+

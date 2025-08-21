@@ -50,3 +50,30 @@
     text-align: center;
 
 }
+
+
+@media (max-width: 480px) { 
+    .marketplace-comingSoon {
+        max-width: 375px;
+        min-height: 500px;
+
+        &::before {
+        width: 200px;
+        height: 368px;
+        filter: blur(100px);
+        top: -150px;
+        left: -100px;
+    }
+            &::after {
+        width: 200px;
+        height: 368px;
+        filter: blur(100px);
+        bottom: -150px;
+        right: -100px;
+    }
+    }
+
+    .marketplace-comingSoon-title {
+        font-size: 50px;
+    }
+}

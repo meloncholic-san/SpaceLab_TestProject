@@ -1,15 +1,14 @@
 @use '../../scss/variables' as variables;
 
+
+//HERO
 .token-hero-section {
     height: 815px;
     max-width: 1920px;
     background: url('../img/token.gif') no-repeat center center;
-        margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
-
-
-
 
 
 .token-hero-container {
@@ -19,18 +18,7 @@
 }
 
 .token-hero-container::before {
-  // content: "";
-  // position: absolute;
-  // width: 621px;
-  // height: 833px;
-  // top: 167px;
-  // left: 1410px;
-  // background: url('../img/token_hero_blur.png') no-repeat;
-  // background-size: contain;
-  // filter: blur(20px);
-  // opacity: 0.8;
-  // z-index: 0;
-  // pointer-events: none;
+
   content: "";
   position: absolute;
   width: 1221px;
@@ -47,7 +35,9 @@
     
 }
 
-
+ .token-hero-mobile-gif {
+  display: none;
+ }
 .token-hero-title {
 
     max-width: 523px;
@@ -118,6 +108,67 @@
   background: transparent;
 }
 
+//HERO MOBILE
+@media (max-width: 480px) {
+ .token-hero-section {
+  background: none;
+  height: 770px;
+ }
+
+ .token-hero-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+
+    &::before {
+      display: none;
+  }
+
+ }
+
+
+
+
+ .token-hero-mobile-gif {
+  display: block;
+    background: url('../img/token.gif') no-repeat center center;
+    background-size: contain;
+    width: 802px;
+    height: 342px;
+ }
+
+ .token-hero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  top: -45px;
+  position: relative;
+ }
+ .token-hero-title {
+  font-size: 60px;
+  min-width: 240px;
+  max-width: none;
+  gap: 0;
+  line-height: 70px;
+  margin-bottom: 5px;
+ }
+ .token-hero-description {
+ font-size: 18px; 
+ text-align: center;
+ max-width: 304px;
+ }
+.token-hero-btn {
+  font-size: 20px;
+  padding: 14px 50px;
+  margin-top: 30px;
+}
+
+
+}
+
 
 //FEATURES
 
@@ -125,7 +176,7 @@
   max-width: 1920px;
     position: relative;
     top: -40px;
-        margin-left: auto;
+      margin-left: auto;
     margin-right: auto;
 }
 
@@ -134,10 +185,6 @@
     margin: 0 auto;
 }
 
-.token-features-swipper-wrapper {
-    display: flex;
-    justify-content: center;
-}
 
 
 .token-feature-item {
@@ -167,12 +214,7 @@
   box-shadow: 2px 2px 9px 0px variables.$accentShadowPurple;
 }
 
-@media (max-width: 768px) {
-  .token-feature-description {
-    min-width: unset;
-    width: 100%;
-  }
-}
+
 
 
 
@@ -207,6 +249,39 @@
   text-decoration: underline;
 }
 
+//FEATURE MOBILE 
+@media (max-width: 480px) {
+
+  .token-features-section {
+    padding-left: 34px;
+    padding-right: 36px;
+  }
+  .token-features-btn-icon.token {
+    width: 60px;
+    height: 60px;
+  }
+
+  .token-features-swipper-wrapper {
+    gap: 30px !important;
+  }
+    .token-feature-description {
+    min-width: unset;
+    min-height: unset;
+    max-width: 290px;
+    font-size: 12px;
+    max-height: 67px;
+    min-height: 67px;
+
+  }
+  .token-feature-inner {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .token-feature-inner a {
+    font-size: 15px;
+  }
+
+}
 
 
 
@@ -299,6 +374,53 @@
 }
 
 
+//TOKENOMICS MOBILE 
+@media (max-width: 480px) {
+
+
+.tokenomics-section {
+  max-width: 375px;
+  margin-top: 80px;
+  margin-bottom: 92px;
+}
+
+.tokenomics-container {
+    &::before {
+    width: 153px;
+    height: 248px;
+    top: -15px;
+    left: -110px;
+    filter: blur(50px);
+  }
+
+    &::after {
+    width: 121px;
+    height: 153px;
+    bottom: -125px;
+    right: -10px;
+    filter: blur(50px);
+  }
+}
+.tokenomics-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.tokenomics-phrase {
+  font-size: 12px;
+  max-width: 300px;
+  margin-bottom: 38px;
+}
+
+.tokenomics-chart-svg {
+  max-width: 313px;
+  max-height: 240px;
+}
+
+}
+
+
+
 //ROADMAP
 
 
@@ -374,6 +496,7 @@
   top: 57px;
   left: 50%;
   transform: translateX(-50%);
+  display: block;
 }
 
 
@@ -517,11 +640,250 @@ font-size: 24px;
 text-align: left;
 padding-left: 70px;
 }
-
+.roadmap-phrase.step-2 {
+  font-size: 22px;
+}
+.roadmap-phrase.step-6 {
+  font-size: 22px;
+  letter-spacing: -0.1px;
+}
 // .roadmap-phrase.reversed {
 //   text-align: right;
 //   padding-right: 70px;
 // }
+.token-roadmap-mobile {
+  display: none;
+  position: absolute;
+}
+
+//ROADMAP MOBILE 
+
+@media (max-width: 480px) {
+.token-roadmap-section {
+  max-width: 375px;
+}
+
+
+.token-roadmap-container {
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 178px;
+    height: 357px;
+    background: radial-gradient(ellipse at center, #86AFFE 13.23%, #A57AFF 53.2%, #FB84FF 91.95%, transparent 100%);
+    filter: blur(90px);
+    top: 42px;
+    left: 191px;
+    transform: scale(0.7, 0.7);
+
+  }
+    &::after {
+    content: "";
+    position: absolute;
+    width: 133px;
+    height: 267px;
+    background: radial-gradient(circle, #86affe 13.23%, #a57aff 53.2%, #fb84ff 91.95%, transparent 100%);
+    filter: blur(70px);
+    bottom: 180px;
+    right: -160px;
+    transform: scale(0.7, 0.7);
+  }
+}
+
+.roadmap-step.step-6 {
+    &::before {
+    content: '';
+    position: absolute;
+    width: 133px;
+    height: 267px;
+    background: radial-gradient(ellipse at center, #86AFFE 13.23%, #A57AFF 53.2%, #FB84FF 91.95%, transparent 100%);
+    filter: blur(70px);
+    top: 255px;
+    left: 245px;
+    transform: scale(0.7, 0.7);
+
+  }
+}
+.token-roadmap-title {
+  font-size: 30px;
+  margin-bottom: 42px;
+}
+
+.token-roadmap-subtitle {
+  display: none;
+}
+
+.token-roadmap-container {
+  max-width: 211px;
+}
+.token-roadmap {
+  display: none;
+}
+
+.token-roadmap-mobile {
+  display: block;
+  width: 36px;
+  position: absolute;
+          left: 55px;
+}
+
+.step-content {
+  min-width: 277px;
+  min-height: 155px;
+}
+
+.token-roadmap-list-item {
+  margin-bottom: 0;
+}
+
+.roadmap-date {
+  font-size: 15px;
+  padding-left: 21px;
+  padding-top: 12px;
+  margin-bottom: 2px;
+}
+.roadmap-phrase {
+  font-size: 11px;
+  padding-left: 21px;
+}
+
+.roadmap-step.step-1 .token-roadmap-stp-count {
+  font-size: 12px;
+  transform: rotate(270deg);
+  padding: 0;
+  height: 18px;
+  min-width: 63px;
+  position: relative;
+  left: 102px;
+  top: 55px;
+}
+.token-roadmap-step-point {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  top: -62px;
+  left: -31px;
+}
+// .roadmap-step {
+//   position: absolute;
+//   top: 0;
+// }
+
+// .roadmap-step.step-2 {
+//     position: absolute;
+//   top: 157px;
+// }
+.roadmap-step.step-1 .step-content {
+  left: 85px;
+  top: -18px;
+}
+.step-content.even {
+  transform: scaleX(1);
+
+}
+
+.step-content.even .step-inner {
+  transform: scaleX(1); 
+}
+
+.roadmap-step.step-2 .step-content.even {
+    position: relative;
+    top: 41px;
+    left: 19px;
+}
+.token-roadmap-step-point.reversed {
+  margin: 0;
+  top: 56px;
+  left: -31px;
+}
+
+.token-roadmap-stp-count.reversed {
+  font-size: 12px;
+  transform: rotate(270deg);
+  padding: 0;
+  height: 18px;
+  min-width: 63px;
+  position: relative;
+  left: -304px;
+  top: 117px;
+}
+.roadmap-phrase.step-2.reversed {
+  font-size: 10px;
+  letter-spacing: -0.4px;
+}
+
+
+.roadmap-step.step-3 .step-content {
+  left: 85px;
+  top: 115px;
+}
+
+.roadmap-step.step-3 .token-roadmap-stp-count.no-point {
+  font-size: 12px;
+  transform: rotate(270deg);
+  padding: 0;
+  height: 18px;
+  min-width: 63px;
+  position: relative;
+  top: 189px;
+  left: 102px;
+}
+
+
+.roadmap-step.step-4 .step-content.even {
+  position: relative;
+  top: 168px;
+  left: 20px;
+}
+
+.roadmap-step.step-4 .token-roadmap-stp-count {
+  font-size: 12px;
+  transform: rotate(270deg);
+  padding: 0;
+  height: 18px;
+  min-width: 63px;
+  position: relative;
+  top: 244px;
+  left: -304px;
+}
+
+.step-content.step-5 {
+  left: 86px;
+  min-height: 200px;
+  top: 225px;
+}
+
+.roadmap-step.step-5 .token-roadmap-stp-count {
+  font-size: 12px;
+  transform: rotate(270deg);
+  padding: 0;
+  height: 18px;
+  min-width: 63px;
+  position: relative;
+  top: 304px;
+  left: 102px;
+}
+
+
+.roadmap-step.step-6 .step-content {
+  left: 20px;
+  top: 250px;
+}
+
+.roadmap-phrase.step-6 {
+  font-size: 10px;
+  letter-spacing: -0.5px;
+} 
+
+.token-roadmap-stp-count.step-6 {
+  left: -517px;
+  top: 313px;
+  transform: rotate(360deg);
+}
+
+}
+
 
 
 
@@ -573,6 +935,14 @@ padding-left: 70px;
   bottom: -30px;
 }
 
+// CONTACT MOBILE
+
+@media (max-width: 480px) { 
+  .token-contact-token-left,
+  .token-contact-token-right {
+    display: none;
+  }
+}
 
 
 
@@ -643,4 +1013,14 @@ padding-left: 70px;
 .token-address-btn-icon {
   width: 32px;
   height: 32px;
+}
+
+
+//TOKEN MOBILE 
+
+
+@media (max-width: 480px) { 
+.token-address-section {
+  display: none;
+}
 }
