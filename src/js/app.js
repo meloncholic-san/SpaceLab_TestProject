@@ -1,6 +1,6 @@
-import { initTokenPage } from '../pages/token/token.js'
-import { initMainPage } from '../pages/main-page/main_page.js'
-import { initFundPage } from '../pages/fund/fund.js'
+import { initTokenPage } from '../pages/token/token.js';
+import { initMainPage } from '../pages/main-page/main_page.js';
+import { initFundPage } from '../pages/fund/fund.js';
 import { initMarketplace } from '../pages/marketplace/marketplace.js';
 import { initHeader } from '../components/header/header.js';
 
@@ -11,54 +11,60 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
 
   function loadPage(page) {
-      if (currentCleanup) {
-    currentCleanup();
-    currentCleanup = null;
-  }
-    page = page.endsWith(".html") ? page : page + ".html";
-    fetch(page)
+    if (currentCleanup) {
+      currentCleanup();
+      currentCleanup = null;
+    }
+
+    const file = `${page}.html`;
+
+    fetch(file)
       .then(res => res.ok ? res.text() : Promise.reject())
       .then(html => {
-      app.innerHTML = html
-      switch (page.replace('.html', '')) {
-        case 'main_page':
-          currentCleanup = initMainPage();
-          break;
-        case 'token':
-          currentCleanup = initTokenPage();
-          break;
-        case 'fund':
-          currentCleanup = initFundPage();
-          break;
-        case 'marketplace':
-          currentCleanup = initMarketplace();
-          break;
-      }
+        app.innerHTML = html;
+
+        switch (page) {
+          case 'main_page':
+            currentCleanup = initMainPage();
+            break;
+          case 'token':
+            currentCleanup = initTokenPage();
+            break;
+          case 'fund':
+            currentCleanup = initFundPage();
+            break;
+          case 'marketplace':
+            currentCleanup = initMarketplace();
+            break;
+          default:
+            app.innerHTML = "<h1>404 - Page not found</h1>";
+        }
       })
-      .catch(() => app.innerHTML = "<h1>404 - Not found</h1>");
+      .catch(() => {
+        app.innerHTML = "<h1>404 - Not found</h1>";
+      });
   }
 
 
-  const initialPath = location.pathname.slice(1) || "main_page";
+  const initialPath = location.hash.slice(1) || "main_page";
+  loadPage(initialPath);
 
-  if (initialPath === "main_page") {
-    history.replaceState({}, "", "/main_page");
-    loadPage("main_page");
-  } else {
-    loadPage(initialPath);
-  }
 
-  window.addEventListener("popstate", () => {
-    const path = location.pathname.slice(1) || "main_page";
+  window.addEventListener("hashchange", () => {
+    const path = location.hash.slice(1) || "main_page";
     loadPage(path);
   });
 
-  document.querySelector("nav").addEventListener("click", e => {
-    const link = e.target.closest("[data-link]");
+
+  const navContainers = document.querySelectorAll('.header-navigation, .footer-navigation');
+
+  navContainers.forEach(nav => {
+  nav.addEventListener('click', e => {
+    const link = e.target.closest('a[data-link]');
     if (!link) return;
     e.preventDefault();
-    const href = link.getAttribute("href");
-    history.pushState({}, "", "/" + href);
-    loadPage(href);
+    const href = link.getAttribute('href');
+    location.hash = href;
+  });
   });
 });

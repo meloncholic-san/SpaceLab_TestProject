@@ -19,8 +19,8 @@ const bs = browserSync.create();
 
 const paths = {
   html: {
-    src: 'src/pages/**/*.html',
-    watch: ['src/pages/**/*.html', 'src/components/**/*.html'],
+    src: ['src/index.html', 'src/pages/**/*.html'],
+    watch: ['src/index.html', 'src/pages/**/*.html', 'src/components/**/*.html'],
     dest: 'dist/',
   },
   styles: {
